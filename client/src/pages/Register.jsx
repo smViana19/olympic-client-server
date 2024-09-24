@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './register.css'
 const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -52,6 +53,8 @@ const Register = () => {
                 </div>
                 {error && <p>{error}</p>}
                 <button type="submit">Cadastar</button>
+                <p>Já Possui Conta? <span><a href="/login" className="entrarconta">Entrar na Conta</a></span></p>
+                
             </form>
         </div>
     )
